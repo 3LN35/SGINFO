@@ -1,12 +1,12 @@
 {
-  "name": "sixginfo",
+  "name": "siginfo",
   "version": "1.0.0",
   "description": "project",
   "author": "daniela rueda",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
+    "start": "node server.js",
     "build": "node build/build.js"
   },
   "dependencies": {
@@ -15,7 +15,7 @@
     "bootstrap-icons": "^1.2.1",
     "bootstrap-vue": "^2.20.1",
     "vue": "^2.6.12",
-    "vue-router": "^3.4.9",
+    "vue-router": "^3.4.9"
     "express": "^4.17.1",
     "serve-static": "^1.14.1"
   },
