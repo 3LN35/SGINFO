@@ -60,14 +60,14 @@
             ></b-form-input>
           </b-form-group>
 
-          <!-- <b-form-group label="Costo:" label-for="costo">
+          <b-form-group label="Costo:" label-for="costo">
             <b-form-input
               id="costo"
               v-model="nuevoProducto.costo"
               type="number"
               required
             ></b-form-input>
-          </b-form-group> -->
+          </b-form-group> 
         
           <b-button pill class="ubication_button mt-2" type="submit" variant="outline-primary">
             Enviar
@@ -89,8 +89,8 @@ export default {
         nombre: "",
         descripcion: "",
         cantidad: 0,
-        precio: 0
-        // costo: 0,
+        precio: 0,
+        costo: 0,
       }
     };
   },
@@ -104,12 +104,14 @@ export default {
   },
   methods: {
     getAllProducts() {
-      return axios.get("https://sixginfo-rest-api.herokuapp.com/productos");
+      //return axios.get("https://sixginfo-rest-api.herokuapp.com/productos");
+      return axios.get("https://sixginfoapi.herokuapp.com/productos");
     },
     processForm() {
       axios
         .post(
-          "https://sixginfo-rest-api.herokuapp.com/productos",
+          //"https://sixginfo-rest-api.herokuapp.com/productos",
+          "https://sixginfoapi.herokuapp.com/productos",
           this.nuevoProducto
         )
         .then(dbProduct => {
